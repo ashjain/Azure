@@ -3,12 +3,12 @@ This repo hosts example PowerShell scripts and documentation for deploying Azure
 
 # Sample Usage
 
-##Example 1
+# Example 1
 DeployZonalGateway.ps1 -Location eastus2euap -GatewayType VPN -SubscriptionId "" -Zone 1 -Name MyAZGW
 
 This will deploy VPN gateway in East US2 EUAP region.  Both instances of the VPN gateway will be deployed in Zone 1.
 
-##Example 2
+# Example 2
 DeployZonalGateway.ps1 -Location eastus2euap -GatewayType VPN -SubscriptionId "" -Zone All -Name MyAZGW
 
 This will deploy VPN gateway in East US2 EUAP region.  Thw two instances will be deployed in 2 different zones (any two out of 1, 2, 3).
