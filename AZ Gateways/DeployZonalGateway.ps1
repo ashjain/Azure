@@ -59,7 +59,7 @@ $allowOutbound = New-AzureRmNetworkSecurityRuleConfig -Name 'all-out' -Descripti
 -Access Allow -Protocol * -Direction Outbound -Priority 100 -SourcePortRange * `
 -DestinationAddressPrefix * -DestinationPortRange * -SourceAddressPrefix * ;
 
-$gatewayPorts = @(8080,8443,8081,20000,443,10001,10002,179,4500,8082,65330,3389)
+$gatewayPorts = @(8080,8081,8082,8443,8444,8445,8446,8447,8448,20000,443,10001,10002,500,4500,179,65330,3389)
 $startingPriority = 100
 $inboundRules = $gatewayPorts | % { New-AzureRmNetworkSecurityRuleConfig -Name "inbound-$_"  `
 -Description "All inbound on port $_" -Priority $startingPriority `
